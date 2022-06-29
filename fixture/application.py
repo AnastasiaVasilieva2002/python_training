@@ -1,5 +1,4 @@
 from selenium import webdriver
-
 from fixture.session import SessionHelper
 from fixture.group import GroupHelper
 
@@ -18,6 +17,7 @@ class Application:
         wd.get("http://localhost:81/addressbook/")
 
     def destroy(self):
+        wd = self.wd
         self.wd.quit()
 
 
